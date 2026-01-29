@@ -378,8 +378,14 @@ msgstr "提問"
 msgid "Subject"
 msgstr "標題"
 
+msgid "Enter subject..."
+msgstr "請輸入標題"
+
 msgid "Text"
 msgstr "內容"
+
+msgid "Enter your question..."
+msgstr "請輸入你的問題"
 
 msgid "Ask question"
 msgstr "發起提問"
@@ -541,6 +547,9 @@ msgstr "現在使用！"
 msgid "No tokens"
 msgstr "無可用 Token"
 
+msgid "Return to Home Page"
+msgstr "回到首頁"
+
 msgid "General information"
 msgstr "競賽資訊"
 
@@ -618,6 +627,9 @@ msgstr "此競賽的上傳次數上限為 %(submissions)s 次。"
 #, python-format
 msgid "You can submit at most %(user_tests)s user tests during this contest."
 msgstr "此競賽的測試次數上限為 %(user_tests)s 次。"
+
+msgid "Time Frame"
+msgstr "計時器"
 
 #, python-format
 msgid "Every user is allowed to compete (i.e. submit solutions) for a uninterrupted time frame of %(per_user_time)s."

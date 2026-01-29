@@ -651,15 +651,15 @@ msgid "By clicking on the button below you can start your time frame."
 msgstr "Accesind butonul de mai jos, veti lansa competitia."
 
 #, python-format
-msgid "You started your time frame at %(start_time)s."
-msgstr "Ati inceput competitia la %(start_time)s."
+msgid "You started your time frame at <strong>%(start_time)s</strong>."
+msgstr "Ati inceput competitia la <strong>%(start_time)s</strong>."
 
 msgid "You can submit solutions until the end of the time frame or until the end of the contest, whatever comes first."
 msgstr "Puteti expedia solutii pana la sfarsitul ferestrei de timp sau a concursului (oricare dintre acestea survine mai intai)."
 
 #, python-format
-msgid "You started your time frame at %(start_time)s and you already finished it."
-msgstr "Ati inceput competitia la %(start_time)s si ea a finisat deja."
+msgid "You started your time frame at <strong>%(start_time)s</strong> and you already finished it."
+msgstr "Ati inceput competitia la <strong>%(start_time)s</strong> si ea a finisat deja."
 
 msgid "There's nothing you can do now."
 msgstr "Nu mai puteti face nimic acum."

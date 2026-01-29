@@ -395,8 +395,14 @@ msgstr "询问列表"
 msgid "Subject"
 msgstr "标题"
 
+msgid "Enter subject..."
+msgstr "请输入标题"
+
 msgid "Text"
 msgstr "内容"
+
+msgid "Enter your question..."
+msgstr "请输入你的问题"
 
 msgid "Ask question"
 msgstr "询问新问题"
@@ -559,6 +565,9 @@ msgstr "现在使用"
 msgid "No tokens"
 msgstr "Token 已用尽"
 
+msgid "Return to Home Page"
+msgstr "回到首页"
+
 msgid "General information"
 msgstr "竞赛信息"
 
@@ -566,22 +575,22 @@ msgid "The contest hasn't started yet."
 msgstr "竞赛尚未开始。"
 
 #, python-format
-msgid "The contest will start at %(start_time)s and will end at %(stop_time)s."
-msgstr "竞赛时间将于 %(start_time)s 开始，至 %(stop_time)s 结束。"
+msgid "The contest will start at <strong>%(start_time)s</strong> and will end at <strong>%(stop_time)s</strong>."
+msgstr "竞赛时间将于 <strong>%(start_time)s</strong> 开始，至 <strong>%(stop_time)s</strong> 结束。"
 
 msgid "The contest is currently running."
 msgstr "竞赛进行中。"
 
 #, python-format
-msgid "The contest started at %(start_time)s and will end at %(stop_time)s."
-msgstr "竞赛时间为 %(start_time)s 至 %(stop_time)s。"
+msgid "The contest started at <strong>%(start_time)s</strong> and will end at <strong>%(stop_time)s</strong>."
+msgstr "竞赛时间为 <strong>%(start_time)s</strong> 至 <strong>%(stop_time)s</strong>。"
 
 msgid "The contest has already ended."
 msgstr "竞赛已经结束。"
 
 #, python-format
-msgid "The contest started at %(start_time)s and ended at %(stop_time)s."
-msgstr "竞赛时间於 %(start_time)s 开始，并已於 %(stop_time)s 结束。"
+msgid "The contest started at <strong>%(start_time)s</strong> and ended at <strong>%(stop_time)s</strong>."
+msgstr "竞赛时间於 <strong>%(start_time)s</strong> 开始，并已於 <strong>%(stop_time)s</strong> 结束。"
 
 #, fuzzy
 msgid "The analysis mode hasn't started yet."
@@ -640,6 +649,9 @@ msgstr "您在本题目的上传次数已达上限 %(submissions)s 次。"
 msgid "You can submit at most %(user_tests)s user tests during this contest."
 msgstr "您在本题目的上传次数已达上限 %(submissions)s 次。"
 
+msgid "Time Frame"
+msgstr "计时器"
+
 #, python-format
 msgid "Every user is allowed to compete (i.e. submit solutions) for a uninterrupted time frame of %(per_user_time)s."
 msgstr "每位参赛者可以选择连续的 %(per_user_time)s 参加本次计时竞赛。"
@@ -654,15 +666,15 @@ msgid "By clicking on the button below you can start your time frame."
 msgstr "点击以下按钮确认开始参加竞赛并开始计时。"
 
 #, python-format
-msgid "You started your time frame at %(start_time)s."
-msgstr "您已在 %(start_time)s 开始竞赛计时。"
+msgid "You started your time frame at <strong>%(start_time)s</strong>."
+msgstr "您已在 <strong>%(start_time)s</strong> 开始竞赛计时。"
 
 msgid "You can submit solutions until the end of the time frame or until the end of the contest, whatever comes first."
 msgstr "您可以提交解答直到整体竞赛终止或您的竞赛计时器结束为止。"
 
 #, python-format
-msgid "You started your time frame at %(start_time)s and you already finished it."
-msgstr "您已在 %(start_time)s 开始竞赛计时，而现在时间已结束。"
+msgid "You started your time frame at <strong>%(start_time)s</strong> and you already finished it."
+msgstr "您已在 <strong>%(start_time)s</strong> 开始竞赛计时，而现在时间已结束。"
 
 msgid "There's nothing you can do now."
 msgstr "目前无法进行任何操作。"

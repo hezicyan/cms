@@ -104,6 +104,8 @@ def get_type_for_file_name(filename: str) -> str | None:
         e.g., "application/pdf".
 
     """
+    if os.path.splitext(filename)[1] in (".in", ".out", ".ans"):
+        return "text/plain"
     mimetype = xdg.Mime.get_type_by_name(filename)
     if mimetype is None:
         return None
