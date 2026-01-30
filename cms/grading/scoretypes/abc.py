@@ -367,9 +367,8 @@ class ScoreTypeGroup(ScoreTypeAlone):
                 data-bs-target="#subtask{{ loop.index }}"
             >
                 <div class="rounded text-center text-nowrap fw-bold me-4 py-1 score">
-    {% if "score_fraction" in st and "max_score" in st %}
-        {% set score = st["score_fraction"] * st["max_score"] %}
-                    {{ score|round(2)|format_decimal }}
+    {% if "score" in st and "max_score" in st %}
+                    {{ score|format_decimal }}
                     / {{ st["max_score"]|format_decimal }}
     {% else %}
                     {% trans %}N/A{% endtrans %}
@@ -409,9 +408,13 @@ class ScoreTypeGroup(ScoreTypeAlone):
                     </thead>
                     <tbody>
     {% for tc in st["testcases"] %}
-        {% if "outcome" in tc
-               and (feedback_level == FEEDBACK_LEVEL_FULL
-                    or tc["show_in_restricted_feedback"]) %}
+        {% set show_tc = "outcome" in tc
+               and ((feedback_level == FEEDBACK_LEVEL_FULL)
+               or (feedback_level == FEEDBACK_LEVEL_RESTRICTED
+               and tc["show_in_restricted_feedback"])
+               or (feedback_level == FEEDBACK_LEVEL_OI_RESTRICTED
+               and tc["show_in_oi_restricted_feedback"])) %}
+        {% if show_tc %}
             {% if tc["outcome"] == "Correct" %}
                         <tr class="correct">
             {% elif tc["outcome"] == "Not correct" %}
@@ -435,7 +438,9 @@ class ScoreTypeGroup(ScoreTypeAlone):
                             </td>
             {% if feedback_level == FEEDBACK_LEVEL_FULL %}
                             <td class="execution-time text-truncate">
-                {% if "time" in tc and tc["time"] is not none %}
+                {% if "time_limit_was_exceeded" in tc and tc["time_limit_was_exceeded"] %}
+                                &gt; {{ tc["time_limit"]|format_duration }}
+                {% elif "time" in tc and tc["time"] is not none %}
                                 {{ tc["time"]|format_duration }}
                 {% else %}
                                 {% trans %}N/A{% endtrans %}
@@ -451,19 +456,21 @@ class ScoreTypeGroup(ScoreTypeAlone):
             {% endif %}
                         </tr>
         {% else %}
+            {% if feedback_level != FEEDBACK_LEVEL_OI_RESTRICTED %}
                         <tr class="undefined">
                             <td class="idx">{{ loop.index }}</td>
                             <td
                                 class="fw-bold text-body-secondary"
-            {% if feedback_level == FEEDBACK_LEVEL_FULL %}
+                {% if feedback_level == FEEDBACK_LEVEL_FULL %}
                                 colspan="4"
-            {% else %}
+                {% else %}
                                 colspan="2"
-            {% endif %}
+                {% endif %}
                             >
                                 {% trans %}N/A{% endtrans %}
                             </td>
                         </tr>
+            {% endif %}
         {% endif %}
     {% endfor %}
                     </tbody>
